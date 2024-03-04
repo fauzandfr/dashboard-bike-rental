@@ -12,5 +12,6 @@
 
 1. Download the `dashboard.py` and `requirements.txt`
 2. Install all the requirement by typing pip, `pip install -r requirements.txt`
-3. Type `streamlit run dashboard.py`
-4. Voila !, the dashboard will open at your favorite browser
+3. Adjust the path for loading the `day.csv` and `hour.csv`
+4. Type `streamlit run dashboard.py`
+5. Voila !, the dashboard will open at your favorite browser
