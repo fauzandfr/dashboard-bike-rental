@@ -6,7 +6,6 @@ import seaborn as sns
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
-# Title of the dashboard
 st.title('Bike Sharing Demand Analysis Dashboard')
 
 # Load data
@@ -18,13 +17,10 @@ def load_data(day_path, hour_path):
     hour_data['dteday'] = pd.to_datetime(hour_data['dteday'])
     return day_data, hour_data
 
-day_df, hour_df = load_data('https://github.com/fauzandfr/dashboard-bike-rental/blob/main/day.csv', 'https://github.com/fauzandfr/dashboard-bike-rental/blob/main/hour.csv')
+day_df, hour_df = load_data('day.csv', 'hour.csv')
 
-# Select analysis type
 analysis_type = st.sidebar.selectbox("Select Analysis Type", 
                                       ["Trend Analysis", "Weather Impact", "User Type Patterns", "Hourly Usage Analysis", "Clustering Analysis"])
-
-# Your existing analysis types here...
 
 if analysis_type == "Trend Analysis":
     st.subheader("Daily Bike Usage Over Time")
