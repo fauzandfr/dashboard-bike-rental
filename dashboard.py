@@ -18,7 +18,7 @@ def load_data(day_path, hour_path):
     hour_data['dteday'] = pd.to_datetime(hour_data['dteday'])
     return day_data, hour_data
 
-day_df, hour_df = load_data('/Users/fauzandfr/Downloads/dicoding/data/day.csv', '/Users/fauzandfr/Downloads/dicoding/data/hour.csv')
+day_df, hour_df = load_data('https://github.com/fauzandfr/dashboard-bike-rental/blob/main/day.csv', 'https://github.com/fauzandfr/dashboard-bike-rental/blob/main/hour.csv')
 
 # Select analysis type
 analysis_type = st.sidebar.selectbox("Select Analysis Type", 
